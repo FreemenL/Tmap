@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Tmap 地图网格化管理</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/map.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+  <span id="city"></span>
+  <div class="title text-center">
+    <button id="clear" class="btn btn-danger btn-lg">重新绘制</button>
+    <button id="clearGrid" class="btn btn-success btn-lg">清除网格</button>
+    <button id="textMaker" class="btn btn-default btn-lg">获取坐标点标注</button>
+    <button id='clearCoord' class="btn btn-primary btn-lg">取消坐标点标注</button>
+    <button id="createMakers" class="btn btn-warning btn-lg">多点标注</button>
+    <button id="makersClick" class="btn btn-warning btn-lg">判断</button>
+    <button id="getLabel" class="btn btn-warning btn-lg">获取label</button>
+  </div>
+  <div id="container"></div>
+  
+  
+  <!-- js -->
+  <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&libraries=drawing"></script>
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/tmap.js"></script>
+<script>
+$(function(){
+  let options = {
+    labelText:'我的位置',
+  }
+  let TMap= new tMap(options);
+  TMap.setBeatMark();
+  TMap.drawingManager();//绘图功能
+  $('#clear').click(function(){
+    TMap.clearOverlay()//清除覆盖物
+  })
+  $('#textMaker').click(function(){
+    TMap.createTestMaker()//添加添加坐标点标注
+  })
+  $('#clearCoord').click(function(){
+    TMap.clearCoord()//取消坐标点标注
+  })
+  $('#clearGrid').click(function(){
+    TMap.clearGrid()//取消坐标点标注
+  })
+  $('#createMakers').click(function(){
+    TMap.createMakers()//多点标注
+  })
+  $("#getLabel").click(function(){
+    TMap.getLabelContent()
+  })
+})
+
+</script>
+</body>
+</html>
+

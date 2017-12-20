@@ -1,0 +1,64 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body, button, input, select, textarea {
+    font: 12px/16px Verdana, Helvetica, Arial, sans-serif;
+}
+p{
+    width:603px;
+    padding-top:3px;
+    overflow:hidden;
+}
+#container{
+  width:1600px;
+  height:800px;
+  margin:0 auto;
+  }
+.title{
+  width:1600px;
+  height:60px;
+  line-height: 60px;
+  margin:0 auto;
+  background: #ccc;
+}
+#city{
+  height:30px;
+  display:none;
+}
+button{
+  outline: none!important;
+  border: none!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
